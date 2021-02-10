@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank Management</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Banks Management Page</h1>
+
+    <a href="index.html">Go to a Mortgage Calculator</a>
+
+    <h2>Manage your Banks List:</h2>
+    <div id="container" class="container grid">
+        <p class="banks title">Banks</p>
+        <p class="title">Interest Rate, %</p>
+        <p class="title">Minimum Down Payment, $</p>
+        <p class="title">Maximum Loan, $</p>
+        <p class="title">Loan term, years</p>
+    </div>
+    <div>
+        <h3>Add your custom bank to the list:</h3>
+        <button id="addButton" class="green-button">ADD</button>
+    </div>
+</div>
+<div class="overlay disappear" id="overlay">
+    <div class="overlay-content">
+        <form action="" class="form grid">
+            <img class='close-button' src="img/close-button.svg" alt="">
+            <h3 class="form-title">Please fill in your bank's custom data: </h3>
+            <label for="form-name" class="form-description">Bank Name: </label>
+            <input id="form-name" type="text"
+                   placeholder="your bank name...">
+            <label for="form-interest" class="form-description">Interest Rate, <b>%</b>: </label>
+            <input id="form-interest" type="number" placeholder="Interest rate..." step=".01">
+            <label for="form-DownPay" class="form-description">Minimum Down Payment, <b>$</b>: </label>
+            <input id="form-DownPay" type="number" placeholder="Minimum down payment..." step="1">
+            <label for="form-maxLoan" class="form-description">Maximum Loan, <b>$</b>: </label>
+            <input id="form-maxLoan" type="number" placeholder="Maximum loan available..." step="1">
+            <label for="form-loanTerm" class="form-description">Loan term, <b>years</b>: </label>
+            <input id="form-loanTerm" type="number" placeholder="Loan term..." step="1">
+            <button class="green-button">CANCEL</button>
+            <button class="green-button addBank" style="display: none;">ADD BANK</button>
+            <button class="green-button editBank" style="display: none;">EDIT BANK</button>
+        </form>
+    </div>
+</div>
+<script src="js/banks.js"></script>
+<script src="js/buttons.js"></script>
+<link rel="stylesheet" href="css/banks.css">
+</body>
+</html>
